@@ -1,3 +1,15 @@
+body {
+  background-color: black;
+  border: black;
+}
+
+.card-body {
+  background-color: #706c61;
+}
+
+.form-control {
+  background-color: #e1f4f3;
+}
 .flex {
     display: block;
     justify-content: space-between;
