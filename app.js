@@ -10,6 +10,7 @@ var myMovies = {
     
 };
 
+// adds local storage to store table cells to print back to user
 if(localStorage.getItem("myMovies")) {
     myMovies = JSON.parse(localStorage.getItem("myMovies"));
     updateMovieHistory();
@@ -27,7 +28,6 @@ function clearMovies() {
 }
 
 function updateMovieHistory(movie) {
-
     var myTable= `
     <h5 class="card-title">Movie History</h5>
     <table id="movieHistoryTable">
@@ -45,6 +45,7 @@ function updateMovieHistory(movie) {
     movieHistory.innerHTML = myTable;
 }
 
+// checks to see if the movie exists 
 function keyExists(value, obj) {
     obj = Object.keys(obj); 
     for (var i = 0; i < obj.length; i++) {
