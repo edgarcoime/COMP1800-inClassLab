@@ -27,7 +27,10 @@ function clearMovies() {
     myMovieList.innerHTML = '';
 }
 
+// generates a template for a movie table to store data in based on the local storage
 function updateMovieHistory(movie) {
+
+    // create table template and retrieve local storage data to fill table
     var myTable= `
     <h5 class="card-title">Movie History</h5>
     <table id="movieHistoryTable">
@@ -42,17 +45,19 @@ function updateMovieHistory(movie) {
         }
     </table>
     `;
+
+    // insert generated movie table into HTML
     movieHistory.innerHTML = myTable;
 }
 
-// checks to see if the movie exists 
+// checks to see if user input is in the list and returns object if it is
 function keyExists(value, obj) {
     obj = Object.keys(obj); 
     for (var i = 0; i < obj.length; i++) {
       if (value.toLowerCase() === obj[i].toLowerCase()) { return obj[i]; }
     }
     return false;
-  }
+}
 
 // This function is executed when the user clicks [ADD MOVIE] button.
 function addMovie() {
