@@ -1,27 +1,35 @@
 body {
-  background-color: black;
+  background-color: #5b8c85;
   border: grey;
 }
 
+li:hover {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none; 
+}
+
 .card-body {
-  background-color: #706c61;
+  background-color: #434e52;
 }
 
 .form-control {
-  background-color: #e1f4f3;
+  background-color: darkslategray;
+}
+
+.card-title {
+  background-color: #434e59;
+  text-align: center;
 }
 .flex {
     display: block;
     justify-content: space-between;
     align-items: center;
-  }
+}
   
-  .container {
-    height: 90vh;
-  }
+.container {
+  height: 90vh;
+}
 
-  li:hover {
-    cursor: pointer;
-  }
-  
-  ul{ list-style-type: none; }
